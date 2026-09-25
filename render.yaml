@@ -11,10 +11,9 @@ services:
       - key: PYTHON_VERSION
         value: 3.11.0
 
-  # ── Frontend (React static site) ──────────────────────────
+  # ── Frontend (React static site - always free, no plan field) ───
   - type: web
     name: portfolio-tracker-ui
-    plan: free
     runtime: static
     rootDir: frontend
     buildCommand: npm install && npm run build
