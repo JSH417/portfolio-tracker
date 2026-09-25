@@ -2,6 +2,7 @@ services:
   # ── Backend (FastAPI) ──────────────────────────────────────
   - type: web
     name: portfolio-tracker-api
+    plan: free
     runtime: python
     rootDir: backend
     buildCommand: pip install -r requirements.txt
@@ -9,14 +10,11 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
-    disk:
-      name: sqlite-data
-      mountPath: /data
-      sizeGB: 1
 
   # ── Frontend (React static site) ──────────────────────────
   - type: web
     name: portfolio-tracker-ui
+    plan: free
     runtime: static
     rootDir: frontend
     buildCommand: npm install && npm run build
