@@ -20,7 +20,7 @@ services:
     staticPublishPath: dist
     envVars:
       - key: VITE_API_URL
-        value: https://portfolio-tracker-api.onrender.com
+        value: https://portfolio-tracker-api-e9ts.onrender.com
     routes:
       - type: rewrite
         source: /*
